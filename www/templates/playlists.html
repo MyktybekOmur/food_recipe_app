@@ -1,0 +1,31 @@
+<ion-view view-title="Yemek Tarifi">
+  <ion-content>
+    <div class="list list-inset">
+  		<label class="item item-input">
+   			 <i class="icon ion-search placeholder-icon"></i>
+    		 <input type="text" placeholder="Search" ng-model='kelime'>
+ 	    </label>
+    </div>
+
+    <div class="card" ng-if="kelime && sonuc.length>0">
+      <div class="item item-text-wrap item-balanced">
+       {{kelime}} kelimesine ait {{sonuc.length}} sonuc blundu
+      </div>
+    </div>
+
+    <div class="card animate__animated animate__jello" ng-if="kelime && sonuc.length==0">
+      <div class="item item-text-wrap item-assertive">
+       {{kelime}} kelimesine ait sonuc blunamadi!
+      </div>
+    </div>
+
+
+    <div class="list">
+
+		<a class="item item-avatar" ng-repeat='yemek in yemekler | filter:kelime as sonuc'  href="#/app/playlists/{{yemek.id}}">
+			<img src="{{yemek.logo}}">
+			<h2>{{yemek.adi}}</h2>
+			<p>{{yemek.kategory}}</p>
+		</a>
+  </ion-content>
+</ion-view>

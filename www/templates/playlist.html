@@ -1,0 +1,43 @@
+<ion-view view-title="Yemek Tarifi">
+  <ion-content>
+    <div class="list card">
+
+	  <div class="item item-avatar">
+	    <img src="{{bilgi.logo}}">
+	    <h2>{{bilgi.adi}}</h2>
+	    <p>{{bilgi.kategory}}</p>
+	  </div>
+
+	  <div class="item item-body">
+	    <img class="full-image" src="{{bilgi.logo}}">
+	    <div class="card" >
+		      <div class="item item-text-wrap item-balanced text" >
+		       Lazim Malzemeler
+		      </div>
+   	    </div>
+   	    <div class="card text">
+		    <p>
+		      {{bilgi.malzemeler}}
+		    </p>
+	    </div>
+
+	    <div class="card" >
+		      <div class="item item-text-wrap item-balanced text" >
+		        Nasıl Yapılır
+		      </div>
+   	    </div>
+   	    <div class="card">
+   	    	   <iframe width="auto" height="auto"
+					src="https://www.youtube.com/embed/eDk-8IdGjUc" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen>
+			   </iframe>   
+   	    </div>
+
+	    <p>
+	      <a href="#" class="subdued">1 Like</a>
+	      <a href="#" class="subdued">5 Comments</a>
+	    </p>
+	  </div>
+
+</div>
+  </ion-content>
+</ion-view>
